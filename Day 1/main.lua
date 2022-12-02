@@ -13,7 +13,7 @@ function SortByElf(compList)
 	compList = string.gsub(compList, "^x*x", "")
 	-- Mehr als eine oder mehrere Newlines ebenfalls umschreiben. Es leben Regular Expressions^^:
 	compList = string.gsub(compList, "xx*x", "n")
-	-- Schlussendlich am Ende noch ein "x". Workaround, zum Glück sieht das niemand^^.
+	-- Schlussendlich am Ende noch ein "n". Workaround, zum Glück sieht das niemand^^.
 	compList = compList.."n"
 
 	-- String Zeichen für Zeichen durchgehen
