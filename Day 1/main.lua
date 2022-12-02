@@ -3,7 +3,6 @@ function SortByElf(compList)
 	local ret = {}
 	local counter = 0 -- tmp-counter
 	local c  -- tmp-char
-	local t  -- tmp-table
 
 	-- Alle Newlines mit einem anderen Zeichen ersetzen; erleichtert die Zuordnungen:
 	compList = string.gsub(compList, "\r\n", "x")
@@ -26,7 +25,7 @@ function SortByElf(compList)
 		else
 			-- Char extrahieren
 			c = string.sub(compList, i, i)
-			-- Char for Sonderzeichen?
+			-- Char ist Sonderzeichen?
 			if c == "x" or c=="n" then
 				-- String vor dem Sonderzeichen extrahieren:
 				n = string.sub(compList, 1, i-1)
@@ -46,7 +45,6 @@ function SortByElf(compList)
 	end
 	return ret
 end
---]]
 
 function main()
 	calList = [[
@@ -67,7 +65,12 @@ function main()
 ]]
 	value = SortByElf(calList)
 	table.sort(value)
+	
+	-- Lösung für Part 1
 	print(value[#value])
+	
+	-- Lösung für Part 2
+	print(value[#value] + value[#value-1] + value[#value-2])
 end
 
 main()
