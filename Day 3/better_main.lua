@@ -97,7 +97,7 @@ end
 --[[
  Querverweis: _HasJointChar
  Argument = Table von Strings.
- Gibt "true" zurück, wenn bei allen Strings im Table dasselbe Char gefunden wurde (egal auf welcher Position),
+ Gibt den Char zurück, wenn bei allen Strings im Table dasselbe Char gefunden wurde (egal auf welcher Position),
  oder "false", wenn kein Char bei allen(!) Strings im Table gefunden wurde.
 --]]
 function FindSameChar(lst_strings)
