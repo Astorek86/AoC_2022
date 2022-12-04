@@ -73,8 +73,7 @@ function ValInArray(searchvar, array_one)
 	return false
 end
 
--- Prüft, wie oft im größeren Array alle Werte des kleineren Arrays
--- auftauchen.
+-- Prüft Überlappungen zwischen zwei Arrays.
 -- Parameter: Zwei Arrays (Reihenfolge egal).
 -- Gibt zwei Bool-Werte zurück:
 -- >> Wenn ALLE Werte des kleineren Arrays im größeren Array gefunden
