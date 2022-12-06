@@ -15,15 +15,12 @@ function duplicate_chars_in_string(search_string)
 end
 
 function InputProcessor(length)
-	local length, ret = length-1
-	-- Verwerfe alle Carriage Returns:
-	local l_input = string.gsub(MYINPUT, "\r\n", "")
-	l_input = string.gsub(l_input, "\n\r", "")
-	l_input = string.gsub(l_input, "\r", "")
-	l_input = string.gsub(l_input, "\n", "")
-
+	local ret
+	local length = length-1
 	local _, chain  -- tmp-str
 	local i  -- tmp-int
+	
+	local l_input = MYINPUT
 	
 	for i=1,#l_input-length do
 		chain = string.sub(l_input, i, i + length)
